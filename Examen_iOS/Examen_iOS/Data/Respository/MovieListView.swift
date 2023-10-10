@@ -8,7 +8,11 @@
 import Foundation
 import SwiftUI
 
+/// It's the main view of the project, here the movies are displayed in a Netflix type style main page
+/// where the images and the names of the movies are shown.
 struct MovieListView: View {
+    
+    /// Declaration of MovieListViewModel to forward the loadData() function that makes the fetch of the popular movies
     @StateObject private var viewModel = MovieListViewModel(movieRepository: TMDBMovieRepository())
 
     var body: some View {

@@ -7,10 +7,12 @@
 
 import SwiftUI
 
+// Represents the ContentView of the Movie App
 @main
 struct Examen_iOSApp: App {
     var body: some Scene {
         WindowGroup {
+            // Main View of the Movie App
             MovieListView()
         }
     }
