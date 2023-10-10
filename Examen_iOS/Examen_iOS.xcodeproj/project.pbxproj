@@ -90,6 +90,14 @@
 			path = Respository;
 			sourceTree = "<group>";
 		};
+		18AADBC32AD5D7C000C3FA19 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				18B466562AD5B8DB00323807 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		18B466202AD5B8A500323807 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				18B466592AD5BC2C00323807 /* Data */,
+				18AADBC32AD5D7C000C3FA19 /* Domain */,
 				18B4665B2AD5BC4500323807 /* Presentation */,
 				18B4662C2AD5B8A500323807 /* Examen_iOSApp.swift */,
 				18B4662E2AD5B8A500323807 /* ContentView.swift */,
@@ -153,7 +162,8 @@
 			children = (
 				18AADBB62AD5C17800C3FA19 /* MovieModel.swift */,
 			);
-			path = Model;
+			name = Model;
+			path = ../Presentation/Model;
 			sourceTree = "<group>";
 		};
 		18B466572AD5B8EA00323807 /* View */ = {
@@ -183,7 +193,6 @@
 		18B4665B2AD5BC4500323807 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				18B466562AD5B8DB00323807 /* Model */,
 				18B466572AD5B8EA00323807 /* View */,
 				18B466582AD5B91500323807 /* ViewModel */,
 			);
