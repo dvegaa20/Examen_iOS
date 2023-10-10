@@ -14,6 +14,7 @@ struct MovieListView: View {
     
     /// Declaration of MovieListViewModel to forward the loadData() function that makes the fetch of the popular movies
     @StateObject private var viewModel = MovieListViewModel(movieRepository: TMDBMovieRepository())
+    @State private var selectedMovie: Movie?
 
     var body: some View {
         NavigationView {
@@ -42,12 +43,18 @@ struct MovieListView: View {
                                 .lineLimit(2)
                                 .underline()
                                 .padding(.horizontal, 8)
+                                .onTapGesture {
+                                    selectedMovie = movie
+                                }
                         }
                     }
                 }
                 .padding(16)
             }
             .navigationBarTitle("Películas Populares")
+            .alert(item: $selectedMovie) { movie in
+                // Display a popup with the movie description
+                Alert(title: Text(movie.title), message: Text(movie.overview ?? "No description available"), dismissButton: .default(Text("OK")))}
         }
         .onAppear(perform: viewModel.loadData)
     }
